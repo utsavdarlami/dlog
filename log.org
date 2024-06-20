@@ -1,0 +1,33 @@
+#+TITLE: My Dev Log
+#+date: 2024-05-21 11:58  
+#+STARTUP: content
+#+STARTUP: latexpreview
+#+OPTIONS: broken-links:t
+#+OPTIONS: toc:2
+#+EXPORT_FILE_NAME: index.html
+
+* About 
+
+Source Repo ->
+
+log to track my dev journey
+
+#+begin_src python :results output :exports both :session
+print("hello word")
+#+end_src
+
+#+RESULTS:
+: hello word
+
+* 2024
+** 2024-06 June
+*** 2024-06-20 Thursday
+
+**** 09:26 PM - Log:
+:LOGBOOK:
+CLOCK: [2024-06-20 Thu 21:26]--[2024-06-20 Thu 21:31] =>  0:05
+:END:
+
+https://www.mikesteder.com/engineering/management/gifs/software/illustrated/2014/12/31/software-engineering-illustrated-im-just-trying-to-change-this-lightbulb.html
+- Good read about technical debt. Revisiting this and still things relatable (now even more).
+
