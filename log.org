@@ -3,7 +3,8 @@
 #+STARTUP: content
 #+STARTUP: latexpreview
 #+OPTIONS: broken-links:t
-#+OPTIONS: toc:2
+#+OPTIONS: toc:3
+#+OPTIONS: num:0
 #+EXPORT_FILE_NAME: index.html
 
 * About 
