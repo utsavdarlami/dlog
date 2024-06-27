@@ -79,3 +79,14 @@ These links are to new copies:
 - Keep Going by Austin Kleon: https://austinkleon.com/keepgoing/
 - Show Your Work by Austin Kleon: https://austinkleon.com/show-your-work/
 
+*** 2024-06-26 Wednesday
+
+**** 11:03 AM - Log:
+:LOGBOOK:
+CLOCK: [2024-06-26 Wed 11:03]--[2024-06-26 Wed 11:04] =>  0:01
+:END:
+
+Running gunicorn to support ~n~ workers and ~y~ thread, and Why?
+- Increasing the server's throughput
+- https://stackoverflow.com/questions/38425620/gunicorn-workers-and-threads
+
