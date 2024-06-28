@@ -1,5 +1,9 @@
 #+TITLE: My Dev Log
 #+date: 2024-05-21 11:58  
+#+REVERSE_DATETREE_DATE_FORMAT: %Y-%m-%d %A
+#+REVERSE_DATETREE_MONTH_FORMAT: %Y-%m %B
+#+REVERSE_DATETREE_YEAR_FORMAT: %Y
+#+REVERSE_DATETREE_USE_WEEK_TREE: nil
 #+STARTUP: content
 #+STARTUP: latexpreview
 #+OPTIONS: broken-links:t
@@ -25,35 +29,33 @@ print("hello word")
 :PROPERTIES:
 :ID:       DEDBD5FD-A0E6-425B-AB28-D526CEBDCFB7
 :END:
-*** 2024-06-20 Thursday
+*** 2024-06-28 Friday
 
-**** 09:26 PM - Log:
+**** 09:48 PM - Log:
 :LOGBOOK:
-CLOCK: [2024-06-20 Thu 21:26]--[2024-06-20 Thu 21:31] =>  0:05
+CLOCK: [2024-06-28 Fri 21:48]--[2024-06-28 Fri 21:50] =>  0:02
 :END:
 
-https://www.mikesteder.com/engineering/management/gifs/software/illustrated/2014/12/31/software-engineering-illustrated-im-just-trying-to-change-this-lightbulb.html
-- Good read about technical debt. Revisiting this and still things relatable (now even more).
+trying to have reverse datetree for this dev-log (feedback from [[https://asubedi.com.np/][ashish subedi]])
+- Latest log at top instead in bottom
 
-*** 2024-06-22 Saturday
+This should be handled in the org-mode capture itself.
+Found one packages that does it
+- https://github.com/akirak/org-reverse-datetree/tree/3ac9b35ebe872f5a619f2e6abe281df66ebbcfe0
+  - How to use it? -> https://out-of-cheese-error.netlify.app/spacemacs-config#org2878c61
+ 
 
-**** 10:01 PM - Log:
+*** 2024-06-26 Wednesday
+
+**** 11:03 AM - Log:
 :LOGBOOK:
-CLOCK: [2024-06-22 Sat 22:01]--[2024-06-22 Sat 22:05] =>  0:04
+CLOCK: [2024-06-26 Wed 11:03]--[2024-06-26 Wed 11:04] =>  0:01
 :END:
 
-Was thinking about writing my own editor. Why you ask?
-- A fun and challenging project to work on
-
-I could write it down in python with help of blogs and videos. But i also want to learn new language so maybe i can try in rust.
-
-Found this good blogs on writing your or TUI based editor in C.
-- https://viewsourcecode.org/snaptoken/kilo/index.html
-And of course everything that is in C has a version in rust.
-- https://www.flenker.blog/hecto/ [this is what i am planning to follow]
-
-Both seem to be great work.
-
+Running gunicorn to support ~n~ workers and ~y~ thread, and Why?
+- Increasing the server's throughput
+- https://stackoverflow.com/questions/38425620/gunicorn-workers-and-threads
+  
 *** 2024-06-24 Monday
 
 **** 05:11 PM - Log:
@@ -79,14 +81,32 @@ These links are to new copies:
 - Keep Going by Austin Kleon: https://austinkleon.com/keepgoing/
 - Show Your Work by Austin Kleon: https://austinkleon.com/show-your-work/
 
-*** 2024-06-26 Wednesday
+*** 2024-06-22 Saturday
 
-**** 11:03 AM - Log:
+**** 10:01 PM - Log:
 :LOGBOOK:
-CLOCK: [2024-06-26 Wed 11:03]--[2024-06-26 Wed 11:04] =>  0:01
+CLOCK: [2024-06-22 Sat 22:01]--[2024-06-22 Sat 22:05] =>  0:04
 :END:
 
-Running gunicorn to support ~n~ workers and ~y~ thread, and Why?
-- Increasing the server's throughput
-- https://stackoverflow.com/questions/38425620/gunicorn-workers-and-threads
+Was thinking about writing my own editor. Why you ask?
+- A fun and challenging project to work on
+
+I could write it down in python with help of blogs and videos. But i also want to learn new language so maybe i can try in rust.
+
+Found this good blogs on writing your or TUI based editor in C.
+- https://viewsourcecode.org/snaptoken/kilo/index.html
+And of course everything that is in C has a version in rust.
+- https://www.flenker.blog/hecto/ [this is what i am planning to follow]
+
+Both seem to be great work.
+
+*** 2024-06-20 Thursday
+
+**** 09:26 PM - Log:
+:LOGBOOK:
+CLOCK: [2024-06-20 Thu 21:26]--[2024-06-20 Thu 21:31] =>  0:05
+:END:
+
+https://www.mikesteder.com/engineering/management/gifs/software/illustrated/2014/12/31/software-engineering-illustrated-im-just-trying-to-change-this-lightbulb.html
+- Good read about technical debt. Revisiting this and still things relatable (now even more).
 
