@@ -10,21 +10,56 @@
 #+OPTIONS: toc:3
 #+OPTIONS: num:0
 #+EXPORT_FILE_NAME: index.html
+#+HTML_HEAD: <link rel="stylesheet" href="main.css" type="text/css"/>
+
 
 * About 
 
-Source Repo ->
+Source Repo -> https://github.com/utsavdarlami/dlog
 
 log to track my dev journey
 
-#+begin_src python :results output :exports both :session
-print("hello word")
+#+begin_src python :results output :exports both 
+print("hello world")
 #+end_src
 
 #+RESULTS:
-: hello word
+: hello world
 
 * 2024
+:PROPERTIES:
+:ID:       FA0EB693-A451-4F5D-A449-8061DA49EC5C
+:END:
+
+** 2024-07 July
+:PROPERTIES:
+:ID:       957DEC6C-670A-4077-9EA7-45D1D8E8E586
+:END:
+
+*** 2024-07-06 Saturday
+
+**** 09:42 AM - Log:
+:LOGBOOK:
+CLOCK: [2024-07-06 Sat 09:42]--[2024-07-06 Sat 09:47] =>  0:05
+:END:
+
+
+Faced an ~JsonDecodingError~ error while trying to convert llm reponse to json object in python.
+
+Decoding JSON String When There are Single Quotes:
+ - https://www.datasciencebyexample.com/2023/03/16/what-to-do-when-single-quotes-in-json-string
+
+**** 09:50 AM - Log:
+:LOGBOOK:
+CLOCK: [2024-07-06 Sat 09:50]--[2024-07-06 Sat 09:54] =>  0:04
+:END:
+
+why use ~functools.wraps~?
+- https://suyogdahal.com.np/posts/how-decorator-crashed-my-flask-app/
+#+BEGIN_QUOTE
+~functools.wrap~ ensures that the decorated function retains the original function’s signature, documentation, and other attributes.
+#+END_QUOTE
+
 ** 2024-06 June
 :PROPERTIES:
 :ID:       DEDBD5FD-A0E6-425B-AB28-D526CEBDCFB7
