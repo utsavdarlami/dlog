@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-07-06 Sat 11:09 -->
+<!-- 2024-08-03 Sat 19:29 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>My Dev Log</title>
@@ -202,21 +202,26 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orga37242d">About</a></li>
-<li><a href="#org31eb9a9">2024</a>
+<li><a href="#org9f7ef54">About</a></li>
+<li><a href="#orgd976f03">2024</a>
 <ul>
-<li><a href="#org4acb967">2024-07 July</a>
+<li><a href="#orgdc3115c">2024-08 August</a>
 <ul>
-<li><a href="#orgba078a0">2024-07-06 Saturday</a></li>
+<li><a href="#org8d60de7">2024-08-03 Saturday</a></li>
 </ul>
 </li>
-<li><a href="#orga855e14">2024-06 June</a>
+<li><a href="#org830942d">2024-07 July</a>
 <ul>
-<li><a href="#org0d7584b">2024-06-28 Friday</a></li>
-<li><a href="#org18f9f5a">2024-06-26 Wednesday</a></li>
-<li><a href="#org890cdc5">2024-06-24 Monday</a></li>
-<li><a href="#org6ff1cf2">2024-06-22 Saturday</a></li>
-<li><a href="#org9ff2b61">2024-06-20 Thursday</a></li>
+<li><a href="#org6776a49">2024-07-06 Saturday</a></li>
+</ul>
+</li>
+<li><a href="#org64e1d1e">2024-06 June</a>
+<ul>
+<li><a href="#orgdf9d697">2024-06-28 Friday</a></li>
+<li><a href="#org9765c64">2024-06-26 Wednesday</a></li>
+<li><a href="#orgb5d2222">2024-06-24 Monday</a></li>
+<li><a href="#orgd10413f">2024-06-22 Saturday</a></li>
+<li><a href="#org23032b8">2024-06-20 Thursday</a></li>
 </ul>
 </li>
 </ul>
@@ -226,9 +231,9 @@
 </div>
 
 
-<div id="outline-container-orga37242d" class="outline-2">
-<h2 id="orga37242d">About</h2>
-<div class="outline-text-2" id="text-orga37242d">
+<div id="outline-container-org9f7ef54" class="outline-2">
+<h2 id="org9f7ef54">About</h2>
+<div class="outline-text-2" id="text-org9f7ef54">
 <p>
 Source Repo -&gt; <a href="https://github.com/utsavdarlami/dlog">https://github.com/utsavdarlami/dlog</a>
 </p>
@@ -248,23 +253,78 @@ hello world
 </div>
 </div>
 
-<div id="outline-container-org31eb9a9" class="outline-2">
-<h2 id="org31eb9a9">2024</h2>
-<div class="outline-text-2" id="text-org31eb9a9">
+<div id="outline-container-orgd976f03" class="outline-2">
+<h2 id="orgd976f03">2024</h2>
+<div class="outline-text-2" id="text-orgd976f03">
 </div>
 
-<div id="outline-container-org4acb967" class="outline-3">
-<h3 id="org4acb967">2024-07 July</h3>
-<div class="outline-text-3" id="text-org4acb967">
+<div id="outline-container-orgdc3115c" class="outline-3">
+<h3 id="orgdc3115c">2024-08 August</h3>
+<div class="outline-text-3" id="text-orgdc3115c">
 </div>
-
-<div id="outline-container-orgba078a0" class="outline-4">
-<h4 id="orgba078a0">2024-07-06 Saturday</h4>
-<div class="outline-text-4" id="text-orgba078a0">
+<div id="outline-container-org8d60de7" class="outline-4">
+<h4 id="org8d60de7">2024-08-03 Saturday</h4>
+<div class="outline-text-4" id="text-org8d60de7">
 </div>
 <ul class="org-ul">
-<li><a id="org25d3bba"></a>09:42 AM - Log:<br />
-<div class="outline-text-5" id="text-org25d3bba">
+<li><a id="orgf2ec6d7"></a>07:24 PM - Log:<br />
+<div class="outline-text-5" id="text-orgf2ec6d7">
+<p>
+how to set a type-hint for sub-classes in python
+</p>
+
+<ul class="org-ul">
+<li><a href="https://stackoverflow.com/questions/46092104/subclass-in-type-hinting">https://stackoverflow.com/questions/46092104/subclass-in-type-hinting</a></li>
+</ul>
+
+<p>
+my use-case
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #fb4933;">from</span> typing <span style="color: #fb4933;">import</span> Dict, Type
+
+<span style="color: #fb4933;">class</span> <span style="color: #d3869b;">Operator</span>:
+
+    <span style="color: #d3869b;">@abstractmethod</span>
+    <span style="color: #fb4933;">def</span> <span style="color: #fabd2f;">operate</span><span style="color: #458588;">()</span>:
+        <span style="color: #fb4933;">raise</span> <span style="color: #d3869b;">NotImplementedError</span>
+
+<span style="color: #fb4933;">class</span> <span style="color: #d3869b;">Add</span><span style="color: #458588;">(</span><span style="color: #d3869b;">Operator</span><span style="color: #458588;">)</span>:
+    <span style="color: #fb4933;">def</span> <span style="color: #fabd2f;">operate</span><span style="color: #458588;">()</span>:
+        <span style="color: #fb4933;">return</span> +
+
+<span style="color: #fb4933;">class</span> <span style="color: #d3869b;">Minus</span><span style="color: #458588;">(</span><span style="color: #d3869b;">Operator</span><span style="color: #458588;">)</span>:
+    <span style="color: #fb4933;">def</span> <span style="color: #fabd2f;">operate</span><span style="color: #458588;">()</span>:
+        <span style="color: #fb4933;">return</span> -
+
+ <span style="color: #7c6f64;"># Dictionary \w the Operator's child as value</span>
+ <span style="color: #83a598;">operator_factory</span>: <span style="color: #d3869b;">Dict</span><span style="color: #458588;">[</span><span style="color: #d3869b;">str</span>, <span style="color: #d3869b;">Type</span><span style="color: #b16286;">[</span><span style="color: #d3869b;">Operator</span><span style="color: #b16286;">]</span><span style="color: #458588;">]</span> = <span style="color: #458588;">{</span>
+     <span style="color: #b8bb26;">"add"</span>: Add,
+     <span style="color: #b8bb26;">"minus"</span>: Minus
+ <span style="color: #458588;">}</span>
+
+</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org830942d" class="outline-3">
+<h3 id="org830942d">2024-07 July</h3>
+<div class="outline-text-3" id="text-org830942d">
+</div>
+
+<div id="outline-container-org6776a49" class="outline-4">
+<h4 id="org6776a49">2024-07-06 Saturday</h4>
+<div class="outline-text-4" id="text-org6776a49">
+</div>
+<ul class="org-ul">
+<li><a id="orgfc76fe4"></a>09:42 AM - Log:<br />
+<div class="outline-text-5" id="text-orgfc76fe4">
 <p>
 Faced an <code>JsonDecodingError</code> error while trying to convert llm reponse to json object in python.
 </p>
@@ -278,8 +338,8 @@ Decoding JSON String When There are Single Quotes:
 </div>
 </li>
 
-<li><a id="org90a7b69"></a>09:50 AM - Log:<br />
-<div class="outline-text-5" id="text-org90a7b69">
+<li><a id="orga6a2b61"></a>09:50 AM - Log:<br />
+<div class="outline-text-5" id="text-orga6a2b61">
 <p>
 why use <code>functools.wraps</code>?
 </p>
@@ -297,17 +357,17 @@ why use <code>functools.wraps</code>?
 </div>
 </div>
 
-<div id="outline-container-orga855e14" class="outline-3">
-<h3 id="orga855e14">2024-06 June</h3>
-<div class="outline-text-3" id="text-orga855e14">
+<div id="outline-container-org64e1d1e" class="outline-3">
+<h3 id="org64e1d1e">2024-06 June</h3>
+<div class="outline-text-3" id="text-org64e1d1e">
 </div>
-<div id="outline-container-org0d7584b" class="outline-4">
-<h4 id="org0d7584b">2024-06-28 Friday</h4>
-<div class="outline-text-4" id="text-org0d7584b">
+<div id="outline-container-orgdf9d697" class="outline-4">
+<h4 id="orgdf9d697">2024-06-28 Friday</h4>
+<div class="outline-text-4" id="text-orgdf9d697">
 </div>
 <ul class="org-ul">
-<li><a id="org2d238cb"></a>09:48 PM - Log:<br />
-<div class="outline-text-5" id="text-org2d238cb">
+<li><a id="org0ef6dc2"></a>09:48 PM - Log:<br />
+<div class="outline-text-5" id="text-org0ef6dc2">
 <p>
 trying to have reverse datetree for this dev-log (feedback from <a href="https://asubedi.com.np/">ashish subedi</a>)
 </p>
@@ -331,13 +391,13 @@ Found one packages that does it
 </div>
 
 
-<div id="outline-container-org18f9f5a" class="outline-4">
-<h4 id="org18f9f5a">2024-06-26 Wednesday</h4>
-<div class="outline-text-4" id="text-org18f9f5a">
+<div id="outline-container-org9765c64" class="outline-4">
+<h4 id="org9765c64">2024-06-26 Wednesday</h4>
+<div class="outline-text-4" id="text-org9765c64">
 </div>
 <ul class="org-ul">
-<li><a id="orge8b4a76"></a>11:03 AM - Log:<br />
-<div class="outline-text-5" id="text-orge8b4a76">
+<li><a id="org5ba785d"></a>11:03 AM - Log:<br />
+<div class="outline-text-5" id="text-org5ba785d">
 <p>
 Running gunicorn to support <code>n</code> workers and <code>y</code> thread, and Why?
 </p>
@@ -350,18 +410,18 @@ Running gunicorn to support <code>n</code> workers and <code>y</code> thread, an
 </ul>
 </div>
 
-<div id="outline-container-org890cdc5" class="outline-4">
-<h4 id="org890cdc5">2024-06-24 Monday</h4>
-<div class="outline-text-4" id="text-org890cdc5">
+<div id="outline-container-orgb5d2222" class="outline-4">
+<h4 id="orgb5d2222">2024-06-24 Monday</h4>
+<div class="outline-text-4" id="text-orgb5d2222">
 </div>
 <ul class="org-ul">
-<li><a id="orgb122607"></a>05:11 PM - Log:<br />
-<div class="outline-text-5" id="text-orgb122607">
+<li><a id="orgf62329e"></a>05:11 PM - Log:<br />
+<div class="outline-text-5" id="text-orgf62329e">
 </div>
 
 <ul class="org-ul">
-<li><a id="orgca6c166"></a>you can only cook what's in the fridge // reasons to read<br />
-<div class="outline-text-6" id="text-orgca6c166">
+<li><a id="orgdf684e9"></a>you can only cook what's in the fridge // reasons to read<br />
+<div class="outline-text-6" id="text-orgdf684e9">
 <ul class="org-ul">
 <li><a href="https://www.youtube.com/watch?v=S0krJtb8vxI">https://www.youtube.com/watch?v=S0krJtb8vxI</a></li>
 </ul>
@@ -394,13 +454,13 @@ These links are to new copies:
 </ul>
 </div>
 
-<div id="outline-container-org6ff1cf2" class="outline-4">
-<h4 id="org6ff1cf2">2024-06-22 Saturday</h4>
-<div class="outline-text-4" id="text-org6ff1cf2">
+<div id="outline-container-orgd10413f" class="outline-4">
+<h4 id="orgd10413f">2024-06-22 Saturday</h4>
+<div class="outline-text-4" id="text-orgd10413f">
 </div>
 <ul class="org-ul">
-<li><a id="orgf4a2aaa"></a>10:01 PM - Log:<br />
-<div class="outline-text-5" id="text-orgf4a2aaa">
+<li><a id="orge7dadfd"></a>10:01 PM - Log:<br />
+<div class="outline-text-5" id="text-orge7dadfd">
 <p>
 Was thinking about writing my own editor. Why you ask?
 </p>
@@ -433,13 +493,13 @@ Both seem to be great work.
 </ul>
 </div>
 
-<div id="outline-container-org9ff2b61" class="outline-4">
-<h4 id="org9ff2b61">2024-06-20 Thursday</h4>
-<div class="outline-text-4" id="text-org9ff2b61">
+<div id="outline-container-org23032b8" class="outline-4">
+<h4 id="org23032b8">2024-06-20 Thursday</h4>
+<div class="outline-text-4" id="text-org23032b8">
 </div>
 <ul class="org-ul">
-<li><a id="org308797b"></a>09:26 PM - Log:<br />
-<div class="outline-text-5" id="text-org308797b">
+<li><a id="orgf175ed6"></a>09:26 PM - Log:<br />
+<div class="outline-text-5" id="text-orgf175ed6">
 <p>
 <a href="https://www.mikesteder.com/engineering/management/gifs/software/illustrated/2014/12/31/software-engineering-illustrated-im-just-trying-to-change-this-lightbulb.html">https://www.mikesteder.com/engineering/management/gifs/software/illustrated/2014/12/31/software-engineering-illustrated-im-just-trying-to-change-this-lightbulb.html</a>
 </p>
@@ -456,7 +516,7 @@ Both seem to be great work.
 <div id="postamble" class="status">
 <p class="date">Date: 2024-05-21 11:58</p>
 <p class="author">Author: felladog</p>
-<p class="date">Created: 2024-07-06 Sat 11:09</p>
+<p class="date">Created: 2024-08-03 Sat 19:29</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

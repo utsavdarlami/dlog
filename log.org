@@ -31,6 +31,47 @@ print("hello world")
 :ID:       FA0EB693-A451-4F5D-A449-8061DA49EC5C
 :END:
 
+** 2024-08 August
+
+*** 2024-08-03 Saturday
+
+**** 07:24 PM - Log:
+:LOGBOOK:
+CLOCK: [2024-08-03 Sat 19:24]--[2024-08-03 Sat 19:27] =>  0:03
+:END:
+
+how to set a type-hint for sub-classes in python
+
+- https://stackoverflow.com/questions/46092104/subclass-in-type-hinting
+
+my use-case
+
+#+begin_src python
+
+  from typing import Dict, Type
+
+  class Operator:
+
+      @abstractmethod
+      def operate():
+          raise NotImplementedError
+
+  class Add(Operator):
+      def operate():
+          return +
+
+  class Minus(Operator):
+      def operate():
+          return -
+
+   # Dictionary \w the Operator's child as value
+   operator_factory: Dict[str, Type[Operator]] = {
+       "add": Add,
+       "minus": Minus
+   }
+
+#+end_src
+
 ** 2024-07 July
 :PROPERTIES:
 :ID:       957DEC6C-670A-4077-9EA7-45D1D8E8E586
