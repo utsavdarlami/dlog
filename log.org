@@ -13,10 +13,6 @@
 #+HTML_HEAD: <link rel="stylesheet" href="main.css" type="text/css"/>
 
 
-test
-
-test
-
 * About 
 
 Source Repo -> https://github.com/utsavdarlami/dlog

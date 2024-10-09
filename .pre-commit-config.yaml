@@ -1,0 +1,9 @@
+repos:
+- repo: local
+  hooks:
+    - id: org-to-html 
+      name: Org File To HTML 
+      description: This hook converts org file to html
+      entry: org_to_html.sh
+      language: script
+      files: 'log.org'
