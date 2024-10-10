@@ -33,6 +33,75 @@ print("hello world")
 
 ** 2024-10 October
 
+*** 2024-10-10 Thursday
+
+**** 08:17 AM
+:LOGBOOK:
+CLOCK: [2024-10-10 Thu 08:17]--[2024-10-10 Thu 08:41] =>  0:24
+:END:
+
+***** writing my own pre-commit hook
+
+I created a pre-commit hook that automatically exports my journal Org file to HTML whenever I make a new commit to this dev journal repo. Previously, I often forgot to perform this export manually, which is what you are currently reading.
+
+Purpose of the Hook:
+
+- The pre-commit hook ensures that the latest changes in log.org are reflected in an HTML file, eliminating the manual process.
+
+Here is simple script that i needed to run every time a new changes was about to be committed
+
+#+BEGIN_SRC
+# Run the org to HTML conversion command
+emacsclient -e '(progn (find-file "log.org") (org-html-export-to-html) (bury-buffer))'
+#+END_SRC
+
+This sounds like pre-commit hook right? So i ended up setting my own pre-commit hook following the resources
+
+- https://www.youtube.com/watch?v=ObksvAZyWdo
+- https://medium.com/@shimo164/custom-python-shell-script-for-pre-commit-700f464bfd63
+
+I am using [[https://pre-commit.com/#intro][pre-commit]] to set up the follow, which might have been a overkill. You can also modify the ~hooks~ provided inside the ~.git/hooks~. Above resources covers it.
+
+Setting up ~.pre-commit-config.yaml~ to run the hook script
+
+#+BEGIN_SRC
+repos:
+- repo: local
+  hooks:
+    - id: org-to-html
+      name: Org File To HTML
+      description: This hook converts org file to html
+      entry: org_to_html.sh
+      language: script
+      files: 'log.org'
+#+END_SRC
+
+Here the ~entry~ points to the main script that we want to run when we make the commit. More on here https://pre-commit.com/#new-hooks
+
+Lets look at the final hook script 
+
+#+BEGIN_SRC
+# org_to_html.sh
+#!/bin/bash
+
+# Get the list of modified files in the commit
+modified_files=$(git diff --cached --name-only)
+
+# Check if log.org is modified and index.html is NOT modified
+if echo "$modified_files" | grep -q "log.org" && ! echo "$modified_files" | grep -q "index.html"; then
+    echo "Running org to HTML export for log.org..."
+
+    # Run the org to HTML conversion command
+    emacsclient -e '(progn (find-file "log.org") (org-html-export-to-html) (bury-buffer))'
+else
+    echo "Skipping org to HTML export. Either log.org is not modified or index.html is modified."
+fi
+#+END_SRC
+
+Complete Code
+- https://github.com/utsavdarlami/dlog
+
+
 *** 2024-10-09 Wednesday
 
 **** 10:35 AM

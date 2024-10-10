@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-10-09 Wed 18:05 -->
+<!-- 2024-10-10 Thu 08:42 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>My Dev Log</title>
@@ -234,31 +234,32 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org0f515da">About</a></li>
-<li><a href="#orgc4a9991">2024</a>
+<li><a href="#org9231afd">About</a></li>
+<li><a href="#org5169bc9">2024</a>
 <ul>
-<li><a href="#orgfe1112c">2024-10 October</a>
+<li><a href="#orge8790c8">2024-10 October</a>
 <ul>
-<li><a href="#org3387929">2024-10-09 Wednesday</a></li>
+<li><a href="#orgd6e6c02">2024-10-10 Thursday</a></li>
+<li><a href="#org174b7d3">2024-10-09 Wednesday</a></li>
 </ul>
 </li>
-<li><a href="#org5c3d65f">2024-08 August</a>
+<li><a href="#org4472e24">2024-08 August</a>
 <ul>
-<li><a href="#orgce6b961">2024-08-03 Saturday</a></li>
+<li><a href="#orga500e8f">2024-08-03 Saturday</a></li>
 </ul>
 </li>
-<li><a href="#org2212d26">2024-07 July</a>
+<li><a href="#org8c2ede4">2024-07 July</a>
 <ul>
-<li><a href="#orgc21f2d1">2024-07-06 Saturday</a></li>
+<li><a href="#org060c11f">2024-07-06 Saturday</a></li>
 </ul>
 </li>
-<li><a href="#orgb5bf359">2024-06 June</a>
+<li><a href="#org6dc8963">2024-06 June</a>
 <ul>
-<li><a href="#orga78241a">2024-06-28 Friday</a></li>
-<li><a href="#org5293b5f">2024-06-26 Wednesday</a></li>
-<li><a href="#orgc4b95bc">2024-06-24 Monday</a></li>
-<li><a href="#org7d96ed7">2024-06-22 Saturday</a></li>
-<li><a href="#org0391f6f">2024-06-20 Thursday</a></li>
+<li><a href="#orgc695ea2">2024-06-28 Friday</a></li>
+<li><a href="#orge5c7dac">2024-06-26 Wednesday</a></li>
+<li><a href="#org46202eb">2024-06-24 Monday</a></li>
+<li><a href="#orgf7c6215">2024-06-22 Saturday</a></li>
+<li><a href="#org6c0dda1">2024-06-20 Thursday</a></li>
 </ul>
 </li>
 </ul>
@@ -268,9 +269,9 @@
 </div>
 
 
-<div id="outline-container-org0f515da" class="outline-2">
-<h2 id="org0f515da">About</h2>
-<div class="outline-text-2" id="text-org0f515da">
+<div id="outline-container-org9231afd" class="outline-2">
+<h2 id="org9231afd">About</h2>
+<div class="outline-text-2" id="text-org9231afd">
 <p>
 Source Repo -&gt; <a href="https://github.com/utsavdarlami/dlog">https://github.com/utsavdarlami/dlog</a>
 </p>
@@ -290,22 +291,124 @@ hello world
 </div>
 </div>
 
-<div id="outline-container-orgc4a9991" class="outline-2">
-<h2 id="orgc4a9991">2024</h2>
-<div class="outline-text-2" id="text-orgc4a9991">
+<div id="outline-container-org5169bc9" class="outline-2">
+<h2 id="org5169bc9">2024</h2>
+<div class="outline-text-2" id="text-org5169bc9">
 </div>
 
-<div id="outline-container-orgfe1112c" class="outline-3">
-<h3 id="orgfe1112c">2024-10 October</h3>
-<div class="outline-text-3" id="text-orgfe1112c">
+<div id="outline-container-orge8790c8" class="outline-3">
+<h3 id="orge8790c8">2024-10 October</h3>
+<div class="outline-text-3" id="text-orge8790c8">
 </div>
-<div id="outline-container-org3387929" class="outline-4">
-<h4 id="org3387929">2024-10-09 Wednesday</h4>
-<div class="outline-text-4" id="text-org3387929">
+<div id="outline-container-orgd6e6c02" class="outline-4">
+<h4 id="orgd6e6c02">2024-10-10 Thursday</h4>
+<div class="outline-text-4" id="text-orgd6e6c02">
 </div>
 <ul class="org-ul">
-<li><a id="org7f8999d"></a>10:35 AM<br />
-<div class="outline-text-5" id="text-org7f8999d">
+<li><a id="org43bb8bb"></a>08:17 AM<br />
+<div class="outline-text-5" id="text-org43bb8bb">
+</div>
+
+<ul class="org-ul">
+<li><a id="org0b3008f"></a>writing my own pre-commit hook<br />
+<div class="outline-text-6" id="text-org0b3008f">
+<p>
+I created a pre-commit hook that automatically exports my journal Org file to HTML whenever I make a new commit to this dev journal repo. Previously, I often forgot to perform this export manually, which is what you are currently reading.
+</p>
+
+<p>
+Purpose of the Hook:
+</p>
+
+<ul class="org-ul">
+<li>The pre-commit hook ensures that the latest changes in log.org are reflected in an HTML file, eliminating the manual process.</li>
+</ul>
+
+<p>
+Here is simple script that i needed to run every time a new changes was about to be committed
+</p>
+
+<pre class="example">
+# Run the org to HTML conversion command
+emacsclient -e '(progn (find-file "log.org") (org-html-export-to-html) (bury-buffer))'
+</pre>
+
+<p>
+This sounds like pre-commit hook right? So i ended up setting my own pre-commit hook following the resources
+</p>
+
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=ObksvAZyWdo">https://www.youtube.com/watch?v=ObksvAZyWdo</a></li>
+<li><a href="https://medium.com/@shimo164/custom-python-shell-script-for-pre-commit-700f464bfd63">https://medium.com/@shimo164/custom-python-shell-script-for-pre-commit-700f464bfd63</a></li>
+</ul>
+
+<p>
+I am using <a href="https://pre-commit.com/#intro">pre-commit</a> to set up the follow, which might have been a overkill. You can also modify the <code>hooks</code> provided inside the <code>.git/hooks</code>. Above resources covers it.
+</p>
+
+<p>
+Setting up <code>.pre-commit-config.yaml</code> to run the hook script
+</p>
+
+<pre class="example">
+repos:
+- repo: local
+  hooks:
+    - id: org-to-html
+      name: Org File To HTML
+      description: This hook converts org file to html
+      entry: org_to_html.sh
+      language: script
+      files: 'log.org'
+</pre>
+
+<p>
+Here the <code>entry</code> points to the main script that we want to run when we make the commit. More on here <a href="https://pre-commit.com/#new-hooks">https://pre-commit.com/#new-hooks</a>
+</p>
+
+<p>
+Lets look at the final hook script 
+</p>
+
+<pre class="example">
+# org_to_html.sh
+#!/bin/bash
+
+# Get the list of modified files in the commit
+modified_files=$(git diff --cached --name-only)
+
+# Check if log.org is modified and index.html is NOT modified
+if echo "$modified_files" | grep -q "log.org" &amp;&amp; ! echo "$modified_files" | grep -q "index.html"; then
+    echo "Running org to HTML export for log.org..."
+
+    # Run the org to HTML conversion command
+    emacsclient -e '(progn (find-file "log.org") (org-html-export-to-html) (bury-buffer))'
+else
+    echo "Skipping org to HTML export. Either log.org is not modified or index.html is modified."
+fi
+</pre>
+
+<p>
+Complete Code
+</p>
+<ul class="org-ul">
+<li><a href="https://github.com/utsavdarlami/dlog">https://github.com/utsavdarlami/dlog</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+
+<div id="outline-container-org174b7d3" class="outline-4">
+<h4 id="org174b7d3">2024-10-09 Wednesday</h4>
+<div class="outline-text-4" id="text-org174b7d3">
+</div>
+<ul class="org-ul">
+<li><a id="org796eba0"></a>10:35 AM<br />
+<div class="outline-text-5" id="text-org796eba0">
 <p>
 howdy! being a long-time. will try to resume this
 meaning while here what i made with while playing \w `NotebookLM`
@@ -320,17 +423,17 @@ meaning while here what i made with while playing \w `NotebookLM`
 </div>
 </div>
 
-<div id="outline-container-org5c3d65f" class="outline-3">
-<h3 id="org5c3d65f">2024-08 August</h3>
-<div class="outline-text-3" id="text-org5c3d65f">
+<div id="outline-container-org4472e24" class="outline-3">
+<h3 id="org4472e24">2024-08 August</h3>
+<div class="outline-text-3" id="text-org4472e24">
 </div>
-<div id="outline-container-orgce6b961" class="outline-4">
-<h4 id="orgce6b961">2024-08-03 Saturday</h4>
-<div class="outline-text-4" id="text-orgce6b961">
+<div id="outline-container-orga500e8f" class="outline-4">
+<h4 id="orga500e8f">2024-08-03 Saturday</h4>
+<div class="outline-text-4" id="text-orga500e8f">
 </div>
 <ul class="org-ul">
-<li><a id="orgdf16421"></a>07:24 PM - Log:<br />
-<div class="outline-text-5" id="text-orgdf16421">
+<li><a id="org058d031"></a>07:24 PM - Log:<br />
+<div class="outline-text-5" id="text-org058d031">
 <p>
 how to set a type-hint for sub-classes in python
 </p>
@@ -375,18 +478,18 @@ my use-case
 </div>
 </div>
 
-<div id="outline-container-org2212d26" class="outline-3">
-<h3 id="org2212d26">2024-07 July</h3>
-<div class="outline-text-3" id="text-org2212d26">
+<div id="outline-container-org8c2ede4" class="outline-3">
+<h3 id="org8c2ede4">2024-07 July</h3>
+<div class="outline-text-3" id="text-org8c2ede4">
 </div>
 
-<div id="outline-container-orgc21f2d1" class="outline-4">
-<h4 id="orgc21f2d1">2024-07-06 Saturday</h4>
-<div class="outline-text-4" id="text-orgc21f2d1">
+<div id="outline-container-org060c11f" class="outline-4">
+<h4 id="org060c11f">2024-07-06 Saturday</h4>
+<div class="outline-text-4" id="text-org060c11f">
 </div>
 <ul class="org-ul">
-<li><a id="org79e77de"></a>09:42 AM - Log:<br />
-<div class="outline-text-5" id="text-org79e77de">
+<li><a id="orge44bdb2"></a>09:42 AM - Log:<br />
+<div class="outline-text-5" id="text-orge44bdb2">
 <p>
 Faced an <code>JsonDecodingError</code> error while trying to convert llm reponse to json object in python.
 </p>
@@ -400,8 +503,8 @@ Decoding JSON String When There are Single Quotes:
 </div>
 </li>
 
-<li><a id="org0c77d15"></a>09:50 AM - Log:<br />
-<div class="outline-text-5" id="text-org0c77d15">
+<li><a id="orge1c797d"></a>09:50 AM - Log:<br />
+<div class="outline-text-5" id="text-orge1c797d">
 <p>
 why use <code>functools.wraps</code>?
 </p>
@@ -419,17 +522,17 @@ why use <code>functools.wraps</code>?
 </div>
 </div>
 
-<div id="outline-container-orgb5bf359" class="outline-3">
-<h3 id="orgb5bf359">2024-06 June</h3>
-<div class="outline-text-3" id="text-orgb5bf359">
+<div id="outline-container-org6dc8963" class="outline-3">
+<h3 id="org6dc8963">2024-06 June</h3>
+<div class="outline-text-3" id="text-org6dc8963">
 </div>
-<div id="outline-container-orga78241a" class="outline-4">
-<h4 id="orga78241a">2024-06-28 Friday</h4>
-<div class="outline-text-4" id="text-orga78241a">
+<div id="outline-container-orgc695ea2" class="outline-4">
+<h4 id="orgc695ea2">2024-06-28 Friday</h4>
+<div class="outline-text-4" id="text-orgc695ea2">
 </div>
 <ul class="org-ul">
-<li><a id="orgc5612de"></a>09:48 PM - Log:<br />
-<div class="outline-text-5" id="text-orgc5612de">
+<li><a id="org7ffbba8"></a>09:48 PM - Log:<br />
+<div class="outline-text-5" id="text-org7ffbba8">
 <p>
 trying to have reverse datetree for this dev-log (feedback from <a href="https://asubedi.com.np/">ashish subedi</a>)
 </p>
@@ -453,13 +556,13 @@ Found one packages that does it
 </div>
 
 
-<div id="outline-container-org5293b5f" class="outline-4">
-<h4 id="org5293b5f">2024-06-26 Wednesday</h4>
-<div class="outline-text-4" id="text-org5293b5f">
+<div id="outline-container-orge5c7dac" class="outline-4">
+<h4 id="orge5c7dac">2024-06-26 Wednesday</h4>
+<div class="outline-text-4" id="text-orge5c7dac">
 </div>
 <ul class="org-ul">
-<li><a id="orgad80082"></a>11:03 AM - Log:<br />
-<div class="outline-text-5" id="text-orgad80082">
+<li><a id="org2ec73a8"></a>11:03 AM - Log:<br />
+<div class="outline-text-5" id="text-org2ec73a8">
 <p>
 Running gunicorn to support <code>n</code> workers and <code>y</code> thread, and Why?
 </p>
@@ -472,18 +575,18 @@ Running gunicorn to support <code>n</code> workers and <code>y</code> thread, an
 </ul>
 </div>
 
-<div id="outline-container-orgc4b95bc" class="outline-4">
-<h4 id="orgc4b95bc">2024-06-24 Monday</h4>
-<div class="outline-text-4" id="text-orgc4b95bc">
+<div id="outline-container-org46202eb" class="outline-4">
+<h4 id="org46202eb">2024-06-24 Monday</h4>
+<div class="outline-text-4" id="text-org46202eb">
 </div>
 <ul class="org-ul">
-<li><a id="org5c3ae7b"></a>05:11 PM - Log:<br />
-<div class="outline-text-5" id="text-org5c3ae7b">
+<li><a id="orgcc3d936"></a>05:11 PM - Log:<br />
+<div class="outline-text-5" id="text-orgcc3d936">
 </div>
 
 <ul class="org-ul">
-<li><a id="org620ef0b"></a>you can only cook what's in the fridge // reasons to read<br />
-<div class="outline-text-6" id="text-org620ef0b">
+<li><a id="org72d7a72"></a>you can only cook what's in the fridge // reasons to read<br />
+<div class="outline-text-6" id="text-org72d7a72">
 <ul class="org-ul">
 <li><a href="https://www.youtube.com/watch?v=S0krJtb8vxI">https://www.youtube.com/watch?v=S0krJtb8vxI</a></li>
 </ul>
@@ -516,13 +619,13 @@ These links are to new copies:
 </ul>
 </div>
 
-<div id="outline-container-org7d96ed7" class="outline-4">
-<h4 id="org7d96ed7">2024-06-22 Saturday</h4>
-<div class="outline-text-4" id="text-org7d96ed7">
+<div id="outline-container-orgf7c6215" class="outline-4">
+<h4 id="orgf7c6215">2024-06-22 Saturday</h4>
+<div class="outline-text-4" id="text-orgf7c6215">
 </div>
 <ul class="org-ul">
-<li><a id="orgb12c65f"></a>10:01 PM - Log:<br />
-<div class="outline-text-5" id="text-orgb12c65f">
+<li><a id="orgcc94c02"></a>10:01 PM - Log:<br />
+<div class="outline-text-5" id="text-orgcc94c02">
 <p>
 Was thinking about writing my own editor. Why you ask?
 </p>
@@ -555,13 +658,13 @@ Both seem to be great work.
 </ul>
 </div>
 
-<div id="outline-container-org0391f6f" class="outline-4">
-<h4 id="org0391f6f">2024-06-20 Thursday</h4>
-<div class="outline-text-4" id="text-org0391f6f">
+<div id="outline-container-org6c0dda1" class="outline-4">
+<h4 id="org6c0dda1">2024-06-20 Thursday</h4>
+<div class="outline-text-4" id="text-org6c0dda1">
 </div>
 <ul class="org-ul">
-<li><a id="org6c15fda"></a>09:26 PM - Log:<br />
-<div class="outline-text-5" id="text-org6c15fda">
+<li><a id="orgc619bb1"></a>09:26 PM - Log:<br />
+<div class="outline-text-5" id="text-orgc619bb1">
 <p>
 <a href="https://www.mikesteder.com/engineering/management/gifs/software/illustrated/2014/12/31/software-engineering-illustrated-im-just-trying-to-change-this-lightbulb.html">https://www.mikesteder.com/engineering/management/gifs/software/illustrated/2014/12/31/software-engineering-illustrated-im-just-trying-to-change-this-lightbulb.html</a>
 </p>
@@ -578,7 +681,7 @@ Both seem to be great work.
 <div id="postamble" class="status">
 <p class="date">Date: 2024-05-21 11:58</p>
 <p class="author">Author: felladog</p>
-<p class="date">Created: 2024-10-09 Wed 18:05</p>
+<p class="date">Created: 2024-10-10 Thu 08:42</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
