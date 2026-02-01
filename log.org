@@ -26,6 +26,22 @@ print("hello world")
 #+RESULTS:
 : hello world
 
+* 2026
+
+** 2026-01 January
+
+*** 2026-01-21 Wednesday
+
+**** 11:22 PM
+:LOGBOOK:
+CLOCK: [2026-01-21 Wed 23:22]--[2026-01-21 Wed 23:27] =>  0:05
+:END:
+
+trying to understand how agents work by actually seeing real world implementation
+- https://ampcode.com/how-to-build-an-agent [Amp Code showing how coding agent can be written]
+- https://danicat.dev/posts/20251031-building-aida/ [UI development with Google ADK]
+
+
 * 2024
 :PROPERTIES:
 :ID:       FA0EB693-A451-4F5D-A449-8061DA49EC5C
